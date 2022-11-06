@@ -120,7 +120,8 @@ class GymCamera:
 
 
 def _process_gym_color(raw_im):
-    return raw_im.flatten().reshape(raw_im.shape[0], raw_im.shape[1]//4, 4)[:, :, :3]
+    im = raw_im.flatten().reshape(raw_im.shape[0], raw_im.shape[1]//4, 4)
+    return im[:, :, :3]
 
 
 def _process_gym_depth(raw_depth, flip=True):

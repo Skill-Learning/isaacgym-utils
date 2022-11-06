@@ -428,7 +428,6 @@ class GymScene:
 
             if cb is not None:
                 cb(self, t_step, t_sim)
-
             t_step += 1
 
     def close(self):
