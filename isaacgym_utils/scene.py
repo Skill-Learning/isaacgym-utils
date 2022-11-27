@@ -424,7 +424,9 @@ class GymScene:
                     policy(self, env_idx, t_step, t_sim)
 
             self.step()
-            self.render(custom_draws=custom_draws)
+            
+            # uncomment this if you want GUI renderering
+            #self.render(custom_draws=custom_draws)
 
             if cb is not None:
                 cb(self, t_step, t_sim)
